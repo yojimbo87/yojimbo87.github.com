@@ -8,22 +8,32 @@ h2. {{ page.title }}
 
 p(meta). 14 Mar 2011
 
-It's been a while since I started playing with node.js and server side JavaScript, therefore building something "non-trivial" and potentially useful become a necessity. I also like to play with real-time server side stuff and node.js is a perfect framework for doing these kinds of chatty applications. WebSockets have still some time to go mainstream and not all of the web browsers supports them (for example webapp developers most beloved IE), so I decided to create a "simple" long poll server called minotaur. This article is mainly about certain parts of minotaur server and it's architecture, but I hope it will also help others during the development of similar systems.
+It's been a while since I started playing with "node.js":http://nodejs.org/ and server side JavaScript, therefore building something "non-trivial" and potentially useful become a necessity. I also like to play with real-time server side stuff and node.js is a perfect framework for doing these kinds of chatty applications. "WebSockets":http://en.wikipedia.org/wiki/Websockets have still some time to go mainstream and not all of the web browsers supports them (for example webapp developers most beloved IE), so I decided to create a "simple" long poll server called "minotaur":https://github.com/yojimbo87/minotaur. This article is mainly about certain parts of minotaur server and it's architecture, but I hope it will also help others during the development of similar systems.
 
 h3. Long polling principle
 
-The principle of "long polling":http://localhost.com/xxx described in wikipedia article is pretty straight forward:
+The principle of "long polling":http://en.wikipedia.org/wiki/Push_technology#Long_polling described in wikipedia "article":http://en.wikipedia.org/wiki/Comet_(programming)#Ajax_with_long_polling is pretty straight forward:
 
 p(quote). "The browser makes an Ajax-style request to the server, which is kept open until the server has new data to send to the browser, which is sent to the browser in a complete response. The browser initiates a new long polling request in order to obtain subsequent events."
 
-h3. Long polling principle
+There are however few issues, or architectural decisions, which needs to be solved in order to start building a long poll server. Solutions and patterns used to solve these issues can affect crucial elements such as performance, security or stability of the server.
 
-It's been a while since I started playing with node.js and server side JavaScript, therefore building something "non-trivial" and potentially useful become a necessity. I also like to play with real-time server side stuff and node.js is a perfect framework for doing these kinds of chatty applications. WebSockets have still some time to go mainstream and not all of the web browsers supports them (for example webapp developers most beloved IE), so I decided to create a "simple" long poll server called minotaur. This article is mainly about certain parts of minotaur server and it's architecture, but I hope it will also help others during the development of similar systems.
+h3. Communication transport between server and client
 
-{% highlight javascript %}
-var db = new db();
-{% endhighlight %}
+There are numerous ways which can be used to asynchronously communicate between server and client including WebSockets, Flash Sockets, XMLHttpRequests or AJAX multipart streaming. However some browsers doesn't support "Cross-Origin Resource Sharing":http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing to solve "same origin policy":http://en.wikipedia.org/wiki/Same_origin_policy, therefore, the only cross-browser compatible way is to use "JSONP":http://en.wikipedia.org/wiki/JSONP polling as transport method.
 
-h3. Long polling principle
+h3. Server side session management
 
-It's been a while since I started playing with node.js and server side JavaScript, therefore building something "non-trivial" and potentially useful become a necessity. I also like to play with real-time server side stuff and node.js is a perfect framework for doing these kinds of chatty applications. WebSockets have still some time to go mainstream and not all of the web browsers supports them (for example webapp developers most beloved IE), so I decided to create a "simple" long poll server called minotaur. This article is mainly about certain parts of minotaur server and it's architecture, but I hope it will also help others during the development of similar systems.
+At first I was using linked list data structure copied from "node-websocket-server":https://github.com/miksago/node-websocket-server because I liked the coding style and it seemed to be pretty fast. But after some time I realized that the most frequent operation on stored sessions is indexing or random access which have not so cool "O(n) complexity":http://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions when "linked list":http://en.wikipedia.org/wiki/Linked_list is used. Therefore, after some "consultation":http://stackoverflow.com/questions/4567002/javascript-array-random-index-insertion-and-deletion at StackOverflow, I switched the data structure to plain old JavaScript object where stored sessions act more like a hash table. The result was slightly faster reaction times and less memory consumption.
+
+h3. Identification of polling clients
+
+When the client sends the first request to the server, it needs to be further uniquely identified by some sort of session ID which will serve as a key identifier for the next polling requests, otherwise the server wouldn't be able to maintain connection with a client. Again after some "consultation":http://stackoverflow.com/questions/4249771/long-polling-server-principle-client-identification with folks at StackOverflow I decided to use signed secure cookies generated by "cookie-node":https://github.com/jed/cookie-node node.js module. When new poll request is sent to the server, client is identified based on the session ID stored in a secure cookie which is decrypted on the server side.
+
+h3. Session reusing
+
+Secure cookie is assigned to the browser context, but user can open multiple tabs with the same long polling web application within one browser. This can lead to serious problems during long polling therefore assigned session should be reused for each new tab which requires separate polling connection. Minotaur server solves this issue by creating a new client connection for each new long polling tab. This client connection have it's own unique ID used for identification and is created withing existing session which keeps track of concurrently polling clients. Number of these parallel connections within one browser is "restricted":http://www.stevesouders.com/blog/2008/03/20/roundup-on-parallel-connections/ by the specific browser.
+
+h3. Future releases
+
+With WebSockets approaching I will probably extend minotaur server communication transports with this great technology and leave JSONP polling as fallback option for situations where WebSockets can't be used. You can find source codes of the "minotaur":https://github.com/yojimbo87/minotaur together with two chat example web applications which are using this long poll server at github.
