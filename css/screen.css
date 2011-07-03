@@ -58,3 +58,9 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 12px 4px 8p
 	#content 
 		ul.posts { margin: 4px 0; }
 		ul.posts li span { font-family: Courier New;  }
+		
+		#post {  }
+		#post p { text-align: justify; }
+		#post pre { border: 1px solid #ddd; background-color: #eef; padding: 0 .4em; }
+		#post code { border: 1px solid #ddd; background-color: #eef; font-size: 85%; padding: 0 .2em; }
+		
