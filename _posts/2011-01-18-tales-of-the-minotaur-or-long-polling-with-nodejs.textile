@@ -14,7 +14,7 @@ h3. Long polling principle
 
 The principle of "long polling":http://localhost.com/xxx described in wikipedia article is pretty straight forward:
 
-p(quote). The browser makes an Ajax-style request to the server, which is kept open until the server has new data to send to the browser, which is sent to the browser in a complete response. The browser initiates a new long polling request in order to obtain subsequent events.
+p(quote). "The browser makes an Ajax-style request to the server, which is kept open until the server has new data to send to the browser, which is sent to the browser in a complete response. The browser initiates a new long polling request in order to obtain subsequent events."
 
 h3. Long polling principle
 
