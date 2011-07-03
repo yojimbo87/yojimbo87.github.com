@@ -47,7 +47,7 @@ body { background: #fff; font-family: Verdana, Arial; font-size: 12px; }
 
 h1 { font-family: Arial; font-size: 16px; font-weight: bold; margin: 8px 4px; }
 h2 { color: #c80000; font-family: Arial; font-size: 16px; font-weight: bold; margin: 12px 4px 8px 4px; }
-h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 12px 4px 8px 4px; }
+h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 16px 4px 12px 4px; }
 
 #container { margin: 0px auto; overflow: hidden; position: relative; width: 900px; }
 	#header { margin: 24px 0 4px 0; overflow: hidden; }
