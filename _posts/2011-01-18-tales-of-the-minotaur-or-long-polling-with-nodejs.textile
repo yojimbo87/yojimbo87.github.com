@@ -14,6 +14,8 @@ h3. Long polling principle
 
 The principle of "long polling":http://localhost.com/xxx described in wikipedia article is pretty straight forward:
 
+p(quote). The browser makes an Ajax-style request to the server, which is kept open until the server has new data to send to the browser, which is sent to the browser in a complete response. The browser initiates a new long polling request in order to obtain subsequent events.
+
 h3. Long polling principle
 
 It's been a while since I started playing with node.js and server side JavaScript, therefore building something "non-trivial" and potentially useful become a necessity. I also like to play with real-time server side stuff and node.js is a perfect framework for doing these kinds of chatty applications. WebSockets have still some time to go mainstream and not all of the web browsers supports them (for example webapp developers most beloved IE), so I decided to create a "simple" long poll server called minotaur. This article is mainly about certain parts of minotaur server and it's architecture, but I hope it will also help others during the development of similar systems.

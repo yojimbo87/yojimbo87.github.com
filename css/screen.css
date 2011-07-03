@@ -55,12 +55,11 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 20px 4px 12
 	#header a:hover { text-decoration: underline; }
 	
 	#content { margin: 4px 0; }
-	#content 
-		ul.posts { margin: 4px 0; }
-		ul.posts li span { font-family: Courier New; }
-		
-		#post {  }
+	#content ul.posts { margin: 4px 0; }
+	#content ul.posts li span { font-family: Courier New; }
+		#post { margin: 0 0 12px 0; }
 		#post p { text-align: justify; }
-		#post p.meta { font-family: Courier New; margin: 0 0 4px 0; }
+		#post p.meta { font-family: Courier New; margin: 0 0 4px 4px; }
+		#post p.quote { margin: 8px; }
 		#post pre { background: #eef; border: 1px solid #ddd; margin: 12px 0; padding: 4px; }
 		
