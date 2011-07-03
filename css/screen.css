@@ -45,7 +45,7 @@ table {
 /* Screen */
 body { background: #fff; font-family: Verdana, Arial; font-size: 12px; }
 
-#container { margin: 0px auto; position: relative; width: 900px; }
+#container { margin: 0px auto; overflow: hidden; position: relative; width: 900px; }
 	#header { margin: 24px 0 12px 0; }
 	#header a { font-weight: bold; line-height: 58px; padding: 0 8px; }
 	
