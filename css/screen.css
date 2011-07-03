@@ -47,7 +47,7 @@ body { background: #fff; font-family: Verdana, Arial; font-size: 12px; line-heig
 
 h1 { font-family: Arial; font-size: 16px; font-weight: bold; margin: 8px 4px; }
 h2 { color: #c80000; font-family: Arial; font-size: 16px; font-weight: bold; margin: 12px 4px 8px 4px; }
-h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 16px 4px 12px 4px; }
+h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 20px 4px 12px 4px; }
 
 #container { margin: 0px auto; overflow: hidden; position: relative; width: 600px; }
 	#header { margin: 24px 0 4px 0; overflow: hidden; }
@@ -61,6 +61,6 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 16px 4px 12
 		
 		#post {  }
 		#post p { text-align: justify; }
-		#post p.meta { font-family: Courier New; }
+		#post p.meta { font-family: Courier New; margin: 0 0 4px 0; }
 		#post pre { background: #eef; border: 1px solid #ddd; margin: 12px 0; padding: 4px; }
 		
