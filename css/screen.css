@@ -47,7 +47,7 @@ body { background: #fff; font-family: Verdana, Arial; font-size: 12px; }
 
 #container { margin: 0px auto; overflow: hidden; position: relative; width: 900px; }
 	#header { margin: 24px 0 12px 0; }
-	#header a { color: #c80000; display: block; font-size: 14px; font-weight: bold; line-height: 58px; padding: 0 8px; text-decoration: none; }
+	#header a { color: #c80000; display: block; float: left; font-size: 14px; font-weight: bold; line-height: 58px; margin: 0 8px; text-decoration: none; }
 	#header a:hover { text-decoration: underline; }
 	
 	#content { margin: 8px 0; }
