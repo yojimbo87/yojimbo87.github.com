@@ -10,4 +10,8 @@ It's been a while since I started playing with node.js and server side JavaScrip
 
 <h3>Long polling principle</h3>
 
-The principle of long polling described in wikipedia article is pretty straight forward:
+The principle of "long polling":http://localhost.com/xxx described in wikipedia article is pretty straight forward:
+
+{% highlight javascript %}
+var db = new db();
+{% endhighlight %}

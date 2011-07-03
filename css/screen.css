@@ -45,12 +45,16 @@ table {
 /* Screen */
 body { background: #fff; font-family: Verdana, Arial; font-size: 12px; }
 
+h1 { font-family: Arial; font-size: 16px; font-weight: bold; margin: 8px 4px; }
+h2 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 8px 4px 4px 4px; }
+h3 { color: #000; font-family: Arial; font-size: 14px; font-weight: bold; margin: 8px 4px 4px 4px; }
+
 #container { margin: 0px auto; overflow: hidden; position: relative; width: 900px; }
 	#header { margin: 24px 0 4px 0; overflow: hidden; }
 	#header a { color: #c80000; display: block; float: left; font-family: Arial; font-size: 14px; font-weight: bold; line-height: 58px; margin: 0 24px; text-decoration: none; }
 	#header a:hover { text-decoration: underline; }
 	
 	#content { margin: 4px 0; }
-	#content h1 { font-family: Arial; font-size: 16px; font-weight: bold; margin: 8px 4px; }
+	#content 
 		ul.posts { margin: 4px 0; }
 		ul.posts li span { font-family: Courier New;  }
