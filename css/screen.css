@@ -52,5 +52,5 @@ body { background: #fff; font-family: Verdana, Arial; font-size: 12px; }
 	
 	#content { margin: 4px 0; }
 	#content h1 { font-family: Arial; font-size: 16px; font-weight: bold; margin: 8px 4px; }
-		ul.posts {}
+		ul.posts { margin: 4px 0; }
 		ul.posts li span { font-family: Courier New;  }
