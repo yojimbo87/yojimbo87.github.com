@@ -6,10 +6,7 @@ keywords: javascript, long polling, long poll server, minotaur, node.js, server 
 
 h2. {{ page.title }}
 
-<p class="meta">
-	<span>14 Mar 2011</span>
-	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="yojimbo87">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-</p>
+<p class="meta"><span>14 Mar 2011</span><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="yojimbo87">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
 
 It's been a while since I started playing with "node.js":http://nodejs.org/ and server side JavaScript, therefore building something "non-trivial" and potentially useful become a necessity. I also like to play with real-time server side stuff and node.js is a perfect framework for doing these kinds of chatty applications. "WebSockets":http://en.wikipedia.org/wiki/Websockets have still some time to go mainstream and not all of the web browsers supports them (for example webapp developers most beloved IE), so I decided to create a "simple" long poll server called "minotaur":https://github.com/yojimbo87/minotaur. This article is mainly about certain parts of minotaur server and it's architecture, but I hope it will also help others during the development of similar systems.
 
