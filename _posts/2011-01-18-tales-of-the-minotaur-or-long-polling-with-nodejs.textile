@@ -6,7 +6,7 @@ keywords: javascript, long polling, long poll server, minotaur, node.js, server 
 
 h2. {{ page.title }}
 
-<p class="meta"><
+<p class="meta">
 	<span>14 Mar 2011</span>
 	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="yojimbo87">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </p>

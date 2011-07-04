@@ -60,7 +60,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		#post { margin: 0 0 16px 0; }
 		#post p { text-align: justify; }
 		#post p.meta { font-family: Courier New; margin: 0 0 6px 6px; }
-		#post p.meta span { margin: 0 0 4px 0; }
+		#post p.meta span { float: left; margin: 0 0 4px 0; }
 		#post p.quote { font-style: italic; margin: 16px; }
 		#post pre { background: #eef; border: 1px solid #ddd; margin: 12px 0; padding: 4px; }
 		
