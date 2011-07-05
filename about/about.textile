@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About yojimbo87
-keywords: Tomas Bosak, blog, yojimbo87, about
+keywords: about
 ---
 
 h2. About yojimbo87

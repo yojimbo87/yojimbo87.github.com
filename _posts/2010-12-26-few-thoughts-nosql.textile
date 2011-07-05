@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Few (subjective) thoughts about NoSQL database systems
-keywords: Tomas Bosak, blog, yojimbo87, couchdb, database, data modeling, impedance mismatch, mongodb, mysql, nosql, orm, querying, relationships
+keywords: couchdb, database, data modeling, impedance mismatch, mongodb, mysql, nosql, orm, querying, relationships
 ---
 
 h2. {{page.title}}
