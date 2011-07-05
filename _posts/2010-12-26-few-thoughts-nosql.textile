@@ -6,7 +6,7 @@ keywords: Tomas Bosak, blog, yojimbo87, couchdb, database, data modeling, impeda
 
 h2. {{page.title}}
 
-<p class="meta"><span>26 Dev 2010</span><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="yojimbo87">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+p(meta). 26 Dec 2010
 
 There is a lot of attention going on around document oriented NoSQL database systems and I have also joined this uprising in terms of playing with CouchDB and MongoDB. Not that my usage of beloved MySQL wouldn't suffice, but there are situations and use cases where, for example, ACID properties are not needed, they represent potential bottleneck or schema-less design offers better flexibility. However there are two main areas which bugs me about these JSON based NoSQL technologies.
 
