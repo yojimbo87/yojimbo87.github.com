@@ -50,7 +50,7 @@ h2 { color: #c80000; font-family: Arial; font-size: 16px; font-weight: bold; mar
 h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12px 4px; }
 
 #container { margin: 0px auto; overflow: hidden; position: relative; width: 600px; }
-	#header { margin: 24px 0 12px 0; overflow: hidden; }
+	#header { margin: 24px 0; overflow: hidden; }
 	#header a { color: #000; display: block; float: left; font-family: Arial; font-size: 14px; font-weight: bold; line-height: 100px; margin: 0 24px; text-decoration: none; }
 	#header a:hover { text-decoration: underline; }
 	
