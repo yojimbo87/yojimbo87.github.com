@@ -55,7 +55,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 	#header a:hover { text-decoration: underline; }
 	
 	#content { margin: 4px 0; }
-	#content ul.posts { margin: 4px 0; }
+	#content ul.posts { margin: 8px 0; }
 	#content ul.posts li span { font-family: Courier New; }
 		#post { margin: 0 0 16px 0; }
 		#post p { text-align: justify; }
