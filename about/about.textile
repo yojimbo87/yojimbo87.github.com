@@ -4,6 +4,6 @@ title: About yojimbo87
 keywords: Tomas Bosak, blog, yojimbo87, about
 ---
 
-h2. ABOUT yojimbo87
+h2. About yojimbo87
 
 Test
