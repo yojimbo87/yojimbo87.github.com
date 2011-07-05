@@ -51,7 +51,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 
 #container { margin: 0px auto; overflow: hidden; position: relative; width: 600px; }
 	#header { margin: 24px 0 4px 0; overflow: hidden; }
-	#header a { color: #c80000; display: block; float: left; font-family: Arial; font-size: 16px; font-weight: bold; line-height: 100px; margin: 0 24px; text-decoration: none; }
+	#header a { color: #c80000; display: block; float: left; font-family: Courier New; font-size: 14px; font-weight: bold; line-height: 100px; margin: 0 24px; text-decoration: none; }
 	#header a:hover { text-decoration: underline; }
 	
 	#content { margin: 4px 0; }
