@@ -1,0 +1,27 @@
+---
+layout: post
+title: Few (subjective) thoughts about NoSQL database systems
+keywords: Tomas Bosak, blog, yojimbo87, couchdb, database, data modeling, impedance mismatch, mongodb, mysql, nosql, orm, querying, relationships
+---
+
+h2. {{page.title}}
+
+<p class="meta"><span>26 Dev 2010</span><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="yojimbo87">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+
+There is a lot of attention going on around document oriented NoSQL database systems and I have also joined this uprising in terms of playing with CouchDB and MongoDB. Not that my usage of beloved MySQL wouldn't suffice, but there are situations and use cases where, for example, ACID properties are not needed, they represent potential bottleneck or schema-less design offers better flexibility. However there are two main areas which bugs me about these JSON based NoSQL technologies.
+
+h3. Relationships and data modeling
+
+There is a common saying that you should stop thinking like you are used to in RDBMS world when modeling databases in CouchDB or MongoDB. Document oriented databases can provide benefits like embedded documents, schema-less design, performance advantage and other stuff which creates new/better solutions and patterns to solve various well known scenarios. However I would say that you can't just get rid of the relationships which are well understood in RDBMS world although they need ORM abstraction to solve "impedance mismatch":http://en.wikipedia.org/wiki/Object-relational_impedance_mismatch. "These":http://wiki.apache.org/couchdb/EntityRelationship "two":http://www.mongodb.org/display/DOCS/Schema+Design articles about data modeling in CouchDB and MongoDB are using RDBMS way to solve one-to-many (or many-to-many) relationships when embedding documents is not an option.
+
+Embedding documents inside another document is a pretty cool feature, but only if these JSON objects are not big, complex or their count is small. Embedded documents which contains another embedded documents and so on or blog post document with hundreds of embedded comments would probably have performance consequences.
+
+The other popular saying is that you model your documents in document oriented databases more "tightly" to your application scenarios. Since this is software engineering and not a construction building, it's nothing unusual when scenarios or specifications are changed. Imagine that you have initially created some JSON document which embeds few other documents in array. You have everything in one place, everything works fine without "explicit" one-to-many relationship which you will probably use in RDBMS world. Now here comes the breaking change (or request for a new feature) in specification and you need (or you are forced) to rebuild all the stuff and use one-to-many like join-wannabe solution.
+
+h3. Querying
+
+Situation with impedance mismatch is much better with document oriented databases and "MapReduce":http://en.wikipedia.org/wiki/Mapreduce functions can serve you just what you need. This however comes at a cost that you need to know what you are looking for in advance (which doesn't reflect reality).
+
+MapReduce, besides direct retrieval by key, is probably the only way of data querying in CouchDB if I'm not mistaken and using MapReduce functions is not an easy job in numerous scenarios. Absence of ad-hoc data querying can be in many use cases crucial requirement which may lead to moving away from certain NoSQL solutions regardless of it's scalability, performance, schema-less design or other advantages.
+
+Right solution for the right problem is pretty nice (and romantic) idea unless you end up maintaining more than three different database systems and keeping them inter-operable at the same time.
