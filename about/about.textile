@@ -1,0 +1,9 @@
+---
+layout: about
+title: About yojimbo87
+keywords: Tomas Bosak, blog, yojimbo87, about
+---
+
+h2. {{ page.title }}
+
+Test

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tales of the minotaur or long polling with node.js
-keywords: javascript, long polling, long poll server, minotaur, node.js, server side javascript
+keywords: Tomas Bosak, blog, yojimbo87, javascript, long polling, long poll server, minotaur, node.js, server side javascript
 ---
 
 h2. {{ page.title }}
