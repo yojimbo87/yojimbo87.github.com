@@ -22,6 +22,7 @@ h3. Querying
 
 Situation with impedance mismatch is much better with document oriented databases and "MapReduce":http://en.wikipedia.org/wiki/Mapreduce functions can serve you just what you need. This however comes at a cost that you need to know what you are looking for in advance (which doesn't reflect reality).
 
+
 MapReduce, besides direct retrieval by key, is probably the only way of data querying in CouchDB if I'm not mistaken and using MapReduce functions is not an easy job in numerous scenarios. Absence of ad-hoc data querying can be in many use cases crucial requirement which may lead to moving away from certain NoSQL solutions regardless of it's scalability, performance, schema-less design or other advantages.
 
 Right solution for the right problem is pretty nice (and romantic) idea unless you end up maintaining more than three different database systems and keeping them inter-operable at the same time.
