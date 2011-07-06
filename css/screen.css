@@ -49,7 +49,7 @@ h1 { color: #c80000; font-family: Arial; font-size: 16px; font-weight: bold; mar
 h2 { color: #c80000; font-family: Arial; font-size: 16px; font-weight: bold; margin: 12px 4px 8px 4px; }
 h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12px 4px; }
 
-#container { margin: 0px auto; overflow: hidden; position: relative; width: 600px; }
+#container { margin: 0px auto; overflow: hidden; position: relative; width: 700px; }
 	#header { margin: 24px 0; overflow: hidden; }
 	#header a { color: #000; display: block; float: left; font-family: Arial; font-size: 14px; font-weight: bold; line-height: 100px; margin: 0 24px; text-decoration: none; }
 	#header a:hover { text-decoration: underline; }
@@ -61,5 +61,5 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		#post p { text-align: justify; }
 		#post p.meta { font-family: Courier New; margin: 0 0 6px 6px; }
 		#post p.quote { font-style: italic; margin: 16px; }
-		#post pre { background: #eef; border: 1px solid #ddd; margin: 12px 0; padding: 4px; }
+		#post pre { background: #eef; border: 1px solid #ddd; margin: 12px 0; overflow: auto; padding: 4px; }
 		

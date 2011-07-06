@@ -18,7 +18,7 @@ h3. OpenSSH and port forwarding for Ubuntu Server
 
 Since I wasn't able to get working copy/paste with installation of guest additions I prefer to use Putty on Windows host to access Ubuntu Server guest through SSH. What is needed on guest to enable this is OpenSSH:
 
-{% highlight javascript %}
+{% highlight %}
 apt-get install openssh-server
 {% endhighlight %}
 
@@ -40,13 +40,13 @@ h3. Apache and Mono installation
 
 Ubuntu Server doesn't come with Apache web server (unless you choose it during the installation process), so let's install it:
 
-{% highlight javascript %}
+{% highlight %}
 apt-get install apache2
 {% endhighlight %}
 
 Now is the time to install Mono. I usually pick the latest "daily tarball package":http://mono.ximian.com/daily/ of Mono and "stable source":http://ftp.novell.com/pub/mono/sources-stable/ of libgdiplus, xsp and mod_mono. Order in which these things are compiled is libgdiplus, mono, xsp and mod_mono. Here is slightly modified console procedure from "this article":http://blog.ruski.co.za/post/2009/10/14/Mono-Compile-Install-Script.aspx:
 
-{% highlight javascript %}
+{% highlight %}
 cd /var/
 mkdir src
 cd /src/
@@ -67,7 +67,7 @@ make install
 
 Up to this point is compiled and installed only libgdiplus. Normally everything would follow up the article mentioned above, but there are some issues in the version of Mono and xsp which I used, so here is how they should be resolved:
 
-{% highlight javascript %}
+{% highlight %}
 cd ../mono-20100711
 ./configure --prefix=/usr/local --with-glib=system
 make
@@ -78,13 +78,13 @@ cd ../xsp-2.6.4
 
 @--with-glib=system@ in configuration prevents from this bug. If you try to compile xsp-2.6.4 now you will get @cannot find metadata file 'Mono.Data.SqliteClient.dll'@ error during compilation process. In order to get rid of this issue search for this line in Makefile with some text editor (nano for example):
 
-{% highlight javascript %}
+{% highlight %}
 SUBDIRS = man src test tools scripts docs packaging unittests
 {% endhighlight %}
 
 Remove @test@ from this line and finish the rest:
 
-{% highlight javascript %}
+{% highlight %}
 make
 make install
 cd ../mod_mono-2.6.3
@@ -95,7 +95,7 @@ make install
 
 You can try to check if Mono is installed now by using this command:
 
-{% highlight javascript %}
+{% highlight %}
 mono --version
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ h3. Apache and mod_mono configuration
 
 "Mod_mono":http://www.mono-project.com/Mod_mono is Apache module that provides ASP.NET (MVC 1 and 2) support. Create testing folder for your web application in @/var/www/@, give it a name @test1@ for example and assign permissions with @chmod 777 /var/www/test1@ command. Navigate to @/etc/apache2/@ directory and copy @mod_mono.conf@ into @/conf.d/@ directory. Current default configuration should be located in @/etc/apache2/sites-available/@ within @default@ file. Replace its content with the following configuration:
 
-{% highlight javascript %}
+{% highlight %}
 MonoAutoApplication disabled
 
 <VirtualHost *:6870>
