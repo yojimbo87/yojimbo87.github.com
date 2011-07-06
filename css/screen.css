@@ -59,7 +59,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 	#content ul.posts li { margin: 2px 0; }
 	#content ul.posts li span { color: #aaa; font-family: Courier New; }
 		#post { margin: 0 0 16px 0; }
-		#post p { text-align: justify; }
+		#post p { margin: 8px 0; text-align: justify; }
 		#post p.meta { font-family: Courier New; margin: 0 0 6px 6px; }
 		#post p.quote { font-style: italic; margin: 16px; }
 		#post p code { background: #f8f8ff; border: 1px solid #ddd; padding: 1px 4px; }
