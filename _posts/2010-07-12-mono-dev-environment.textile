@@ -1,0 +1,128 @@
+---
+layout: post
+title: Mono web development/testing environment using Windows, Ubuntu Server and VirtualBox
+keywords: .net, apache, asp.net, linux, mono, ubuntu, virtualbox, web development
+---
+
+h2. {{page.title}}
+
+p(meta). 12 Jul 2010
+
+Development of web based .NET applications which runs on Mono under Linux can be done in various ways. I prefer using Visual Studio on Windows for application development and Ubuntu Server with Mono and Apache as a testing environment. This approach have advantages like system/platform separation and it still can be done on a single physical machine thanks to virtualization software like VirtualBox. Isolation of testing environment is crucial to avoid mess created by single system used for all scenarios. Virtualized Ubuntu Server in this example can be also used for simulating software updates/upgrades and deployment of web applications.
+
+h3. VirtualBox and guest OS
+
+VirtualBox runs on Windows, Linux, Macintosh and OpenSolaris hosts. My host OS is Windows with VirtualBox 3.2.6 and Ubuntu Server 10.04 32-bit running as a guest OS. There are numerous "tutorials":http://www.virtualbox.org/wiki/User_HOWTOS and great "user manual":http://www.virtualbox.org/manual/UserManual.html on how to set it up. "Guest additions":http://forums.virtualbox.org/viewtopic.php?f=3&t=15679 are required for mouse integration and shard folders (skip Configuring your Xorg/Xserver section).
+
+h3. OpenSSH and port forwarding for Ubuntu Server
+
+Since I wasn't able to get working copy/paste with installation of guest additions I prefer to use Putty on Windows host to access Ubuntu Server guest through SSH. What is needed on guest to enable this is OpenSSH:
+
+{% highlight javascript %}
+apt-get install openssh-server
+{% endhighlight %}
+
+Now turn off the guest and get back to host OS and "port forwarding":http://www.linuxjournal.com/content/tech-tip-port-forwarding-virtualbox-vboxmanage. This is needed not only for SSH (port 22), but also for forwarding "port":http://www.iana.org/assignments/port-numbers on which will be running your future web application served by Apache web server on Ubuntu Server guest. I will choose port number 6870 which is unassigned. Commands below are inserted through command line on Windows in c:\Program Files\Oracle\VirtualBox\ folder. Here is a working example:
+
+{% highlight javascript %}
+VBoxManage setextradata "UbuntuServer" "VBoxInternal/Devices/e1000/0/LUN#0/Config/guest22/HostPort" 22
+VBoxManage setextradata "UbuntuServer" "VBoxInternal/Devices/e1000/0/LUN#0/Config/guest22/GuestPort" 22
+VBoxManage setextradata "UbuntuServer" "VBoxInternal/Devices/e1000/0/LUN#0/Config/guest22/Protocol" TCP
+
+VBoxManage setextradata "UbuntuServer" "VBoxInternal/Devices/e1000/0/LUN#0/Config/guest6870/HostPort" 6870
+VBoxManage setextradata "UbuntuServer" "VBoxInternal/Devices/e1000/0/LUN#0/Config/guest6870/GuestPort" 6870
+VBoxManage setextradata "UbuntuServer" "VBoxInternal/Devices/e1000/0/LUN#0/Config/guest6870/Protocol" TCP
+{% endhighlight %}
+
+Notice that in tutorial linked above are commands with @pcnet@ instead of @e1000@. This is because I have Intel gigabit network inteface card so the configuration may vary. XML configuration file is located in @c:\Users\YOUR_USER_NAME.VirtualBox\Machines\YOUR_GUEST_NAME\@ folder and can be manually changed. You should be able to access running guest OS now by connecting with Putty through SSH, for example root@127.0.0.1.
+
+h3. Apache and Mono installation
+
+Ubuntu Server doesn't come with Apache web server (unless you choose it during the installation process), so let's install it:
+
+{% highlight javascript %}
+apt-get install apache2
+{% endhighlight %}
+
+Now is the time to install Mono. I usually pick the latest "daily tarball package":http://mono.ximian.com/daily/ of Mono and "stable source":http://ftp.novell.com/pub/mono/sources-stable/ of libgdiplus, xsp and mod_mono. Order in which these things are compiled is libgdiplus, mono, xsp and mod_mono. Here is slightly modified console procedure from "this article":http://blog.ruski.co.za/post/2009/10/14/Mono-Compile-Install-Script.aspx:
+
+{% highlight javascript %}
+cd /var/
+mkdir src
+cd /src/
+apt-get install build-essential pkg-config libglib2.0-dev bison libcairo2-dev libungif4-dev libjpeg62-dev libtiff4-dev gettext apache2-threaded-dev
+wget http://ftp.novell.com/pub/mono/sources/libgdiplus/libgdiplus-2.6.4.tar.bz2
+wget http://mono.ximian.com/daily/mono-20100711.tar.bz2
+wget http://ftp.novell.com/pub/mono/sources/xsp/xsp-2.6.4.tar.bz2
+wget http://ftp.novell.com/pub/mono/sources/mod_mono/mod_mono-2.6.3.tar.bz2
+tar -xvf libgdiplus-2.6.4.tar.bz2 
+tar -xvf mono-20100711.tar.bz2 
+tar -xvf xsp-2.6.4.tar.bz2 
+tar -xvf mod_mono-2.6.3.tar.bz2
+cd libgdiplus-2.6.4
+./configure --prefix=/usr/local
+make
+make install
+{% endhighlight %}
+
+Up to this point is compiled and installed only libgdiplus. Normally everything would follow up the article mentioned above, but there are some issues in the version of Mono and xsp which I used, so here is how they should be resolved:
+
+{% highlight javascript %}
+cd ../mono-20100711
+./configure --prefix=/usr/local --with-glib=system
+make
+make install
+cd ../xsp-2.6.4
+./configure --prefix=/usr/local
+{% endhighlight %}
+
+@--with-glib=system@ in configuration prevents from this bug. If you try to compile xsp-2.6.4 now you will get @cannot find metadata file 'Mono.Data.SqliteClient.dll'@ error during compilation process. In order to get rid of this issue search for this line in Makefile with some text editor (nano for example):
+
+{% highlight javascript %}
+SUBDIRS = man src test tools scripts docs packaging unittests
+{% endhighlight %}
+
+Remove @test@ from this line and finish the rest:
+
+{% highlight javascript %}
+make
+make install
+cd ../mod_mono-2.6.3
+./configure --prefix=/usr/local
+make
+make install
+{% endhighlight %}
+
+You can try to check if Mono is installed now by using this command:
+
+{% highlight javascript %}
+mono --version
+{% endhighlight %}
+
+h3. Apache and mod_mono configuration
+
+"Mod_mono":http://www.mono-project.com/Mod_mono is Apache module that provides ASP.NET (MVC 1 and 2) support. Create testing folder for your web application in @/var/www/@, give it a name @test1@ for example and assign permissions with @chmod 777 /var/www/test1@ command. Navigate to @/etc/apache2/@ directory and copy @mod_mono.conf@ into @/conf.d/@ directory. Current default configuration should be located in @/etc/apache2/sites-available/@ within @default@ file. Replace its content with the following configuration:
+
+{% highlight javascript %}
+MonoAutoApplication disabled
+
+<VirtualHost *:6870>
+    DocumentRoot /var/www/test1/
+    MonoServerPath default /usr/local/bin/mod-mono-server2
+    AddMonoApplications default "/:/var/www/test1"
+
+    <location />
+        MonoSetServerAlias default
+        SetHandler mono
+    </location>
+
+    <Directory /var/www/test1/>
+        Options Indexes
+        AllowOverride None
+        Order allow,deny
+        allow from all
+    </Directory>
+</VirtualHost>
+{% endhighlight %}
+
+Finally copy your ASP.NET (MVC) web application into @/var/www/test1/@, restart guest OS and you should be able to see your app running in browser on your host system when you access @http://localhost:6870/@.
