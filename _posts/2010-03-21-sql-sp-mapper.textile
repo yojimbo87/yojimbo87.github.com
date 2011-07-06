@@ -10,6 +10,7 @@ p(meta). 21 Mar 2010
 
 Pure ADO.NET is probably the fastest way to RDBMS data access and manipulation. On the other hand it doesn't provide abstraction layer and mapping features of object-relational mappers like LINQ to SQL or Entity Framework. However mapping (without relations) can be easily improvised with the little use of reflection and generics.
 
+
 Example below automatically maps output of MySQL stored procedure into generic collection of objects. Core functionality is written in DbManager class which provides three main methods for data access and manipulation: ExecuteSingle (returns single mapped object), ExecuteList (returns generic collection of mapped objects) and ExecuteNonQuery (used for non query stored procedures like INSERT, UPDATE or DELETE). All three methods support IN and OUT parameters. This C# example is written to work with "MySQL .NET connector":http://dev.mysql.com/downloads/connector/net/, but can be extended to any type of database which have .NET connector.
 
 {% highlight csharp %}
