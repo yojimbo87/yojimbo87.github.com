@@ -18,13 +18,13 @@ I @used to@ work with the following:
 * MS SQL Server
 * Nginx
 
-and I @like@ to keep maintaining this stuff:
+I @like@ to keep maintaining this stuff:
 * C#, SQL
 * ASP.NET MVC
 * MySQL
 * Ubuntu Server, Windows Server
 * IIS, Apache
 
-however I @love@ to play with these ones:
+I @love@ to play with these ones:
 * HTML5, JavaScript, Node.js
 * CouchDB, Redis
