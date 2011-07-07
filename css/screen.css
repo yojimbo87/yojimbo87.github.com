@@ -64,7 +64,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		p.quote { font-style: italic; margin: 16px; }
 		p code { background: #f8f8ff; border: 1px solid #ddd; padding: 1px 4px; }
 		ul { list-style-type: none; /*margin: 0 0 0 8px;*/ }
-		li { background: transparent url('/images/bullet.png') 0 50%; display: list-item; text-indent: 16px; }
+		li { background: transparent url('/images/bullet.png') 0 50% no-repeat; display: list-item; text-indent: 16px; }
 		.highlight pre { background: #f8f8ff; border: 1px solid #ddd; font-family: Courier New; margin: 12px 0; overflow: auto; padding: 4px; }
 		.related { margin: 12px 0 24px 0; overflow: hidden; }
 		
