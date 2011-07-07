@@ -1,9 +1,30 @@
 ---
 layout: about
-title: About yojimbo87
+title: About
 keywords: about
 ---
 
-h2. About yojimbo87
+h2. About
 
-Test
+At the time of writing this page I was (and probably still am): 
+- passionate programmer and software engineer
+- cyberpunk lover
+- samurai admirer
+- deeply religious nonbeliever
+
+I @used to@ work with this stuff:
+- C/C++, Java
+- ASP.NET Web Forms
+- MS SQL Server
+- Nginx
+
+and I @like@ to keep maintaining these ones:
+- C#, SQL
+- ASP.NET MVC
+- MySQL
+- Ubuntu Server, Windows Server
+- IIS, Apache
+
+but I @love@ to play with the following:
+- HTML5, JavaScript, Node.js
+- CouchDB, Redis
