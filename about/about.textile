@@ -7,24 +7,24 @@ keywords: about
 h2. About
 
 At the time of writing this page I was (and probably still am): 
-- passionate programmer and software engineer
-- cyberpunk lover
-- samurai admirer
-- deeply religious nonbeliever
+* passionate programmer and software engineer
+* cyberpunk lover
+* samurai admirer
+* deeply religious nonbeliever
 
-I @used to@ work with this stuff:
-- C/C++, Java
-- ASP.NET Web Forms
-- MS SQL Server
-- Nginx
+I @used to@ work with the following:
+* C/C++, Java
+* ASP.NET Web Forms
+* MS SQL Server
+* Nginx
 
-and I @like@ to keep maintaining these ones:
-- C#, SQL
-- ASP.NET MVC
-- MySQL
-- Ubuntu Server, Windows Server
-- IIS, Apache
+and I @like@ to keep maintaining this stuff:
+* C#, SQL
+* ASP.NET MVC
+* MySQL
+* Ubuntu Server, Windows Server
+* IIS, Apache
 
-but I @love@ to play with the following:
-- HTML5, JavaScript, Node.js
-- CouchDB, Redis
+however I @love@ to play with these ones:
+* HTML5, JavaScript, Node.js
+* CouchDB, Redis
