@@ -7,10 +7,10 @@ keywords: about
 h2. About
 
 At the time of writing this page I was (and probably still am): 
-* passionate programmer and software engineer
-* cyberpunk lover
-* samurai admirer
-* deeply religious nonbeliever
+* Passionate programmer and software engineer
+* Cyberpunk lover
+* Samurai admirer
+* Deeply religious nonbeliever
 
 I @used to@ work with the following:
 * C/C++, Java
@@ -26,5 +26,6 @@ I @like@ to keep maintaining this stuff:
 * IIS, Apache
 
 I @love@ to play with these ones:
-* HTML5, JavaScript, Node.js
-* CouchDB, Redis
+* HTML5, JavaScript
+* Node.js and data intensive real-time madness
+* CouchDB, Redis and NoSQL in general
