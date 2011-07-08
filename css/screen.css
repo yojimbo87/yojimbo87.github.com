@@ -68,3 +68,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		.highlight pre { background: #f8f8ff; border: 1px solid #ddd; font-family: Courier New; margin: 12px 0; overflow: auto; padding: 4px; }
 		.related { margin: 12px 0 24px 0; overflow: hidden; }
 		
+		ul.profiles { margin: 0; }
+		ul.profiles li { line-height: 22px; }
+		ul.profiles li img { margin: 0 4px 0 0; }
+		

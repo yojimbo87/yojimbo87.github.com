@@ -31,7 +31,9 @@ I @love@ to play with these ones:
 * CouchDB, Redis and NoSQL systems in general
 
 You can find me here:
-<img src="/images/stackoverflow.png" alt="" /> "Stack Overflow":http://stackoverflow.com/users/217288/yojimbo87
-<img src="/images/github.png" alt="" /> "GitHub":https://github.com/yojimbo87
-<img src="/images/twitter.png" alt="" /> "Twitter":https://twitter.com/yojimbo87
-<img src="/images/linkedin.gif" alt="" /> "LinkedIn":http://www.linkedin.com/in/tomasbosak
+<ul class="profiles">
+<li><img src="/images/stackoverflow.png" alt="stackoverflow" /> "Stack Overflow":http://stackoverflow.com/users/217288/yojimbo87 </li>
+<li><img src="/images/github.png" alt="github" /> "GitHub":https://github.com/yojimbo87 </li>
+<li><img src="/images/twitter.png" alt="twitter" /> "Twitter":https://twitter.com/yojimbo87 </li>
+<li><img src="/images/linkedin.gif" alt="linkedin" /> "LinkedIn":http://www.linkedin.com/in/tomasbosak </li>
+</ul>
