@@ -69,7 +69,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		.related { margin: 12px 0 24px 0; overflow: hidden; }
 		
 		ul.profiles { margin: 0; padding: 0; }
-		ul.profiles li { background: transparent; margin: 8px 0; overflow: hidden; padding: 0; text-indent: 12px; }
+		ul.profiles li { background: transparent; margin: 8px 0 0 8px; overflow: hidden; padding: 0; text-indent: 12px; }
 		ul.profiles li a { float: left; display: block; line-height: 16px; text-indent: 8px; }
 		ul.profiles li img { float: left; }
 		
