@@ -70,5 +70,6 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		
 		ul.profiles { margin: 0; padding: 0; }
 		ul.profiles li { background: transparent; margin: 0; padding: 0; text-indent: 6px; }
-		ul.profiles li img { margin: 0 6px 1px 0; vertical-align: middle; }
+		ul.profiles li a { margin: 2px 0 0 0; }
+		ul.profiles li img { margin: 0 6px 0 0; vertical-align: middle; }
 		
