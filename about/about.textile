@@ -6,9 +6,9 @@ keywords: about
 
 h2. About
 
-At the time of writing this page I was (and probably still am): 
+At the time of writing this page I was (and hopefully still am): 
 * Passionate programmer and software engineer
-* Cyberpunk lover
+* Cyberpunk fan
 * Samurai admirer
 * Deeply religious nonbeliever
 
@@ -18,7 +18,7 @@ I @used to@ work with the following:
 * MS SQL Server
 * Nginx
 
-I @like@ to keep maintaining this stuff:
+I @like@ to keep maintaining knowledge about this stuff:
 * C#, SQL
 * ASP.NET MVC
 * MySQL
@@ -28,4 +28,10 @@ I @like@ to keep maintaining this stuff:
 I @love@ to play with these ones:
 * HTML5, JavaScript
 * Node.js and data intensive real-time madness
-* CouchDB, Redis and NoSQL in general
+* CouchDB, Redis and NoSQL systems in general
+
+You can find me here:
+<img src="/images/stackoverflow.png" alt="" /> "Stack Overflow":http://stackoverflow.com/users/217288/yojimbo87
+<img src="/images/github.png" alt="" /> "GitHub":https://github.com/yojimbo87
+<img src="/images/twitter.png" alt="" /> "Twitter":https://twitter.com/yojimbo87
+<img src="/images/linkedin.gif" alt="" /> "LinkedIn":http://www.linkedin.com/in/tomasbosak
