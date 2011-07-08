@@ -69,6 +69,6 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		.related { margin: 12px 0 24px 0; overflow: hidden; }
 		
 		ul.profiles { margin: 0; padding: 0; }
-		ul.profiles li { background: transparent; line-height: 18px; margin: 0; padding: 0; text-indent: 4px; }
+		ul.profiles li { background: transparent; line-height: 18px; margin: 0; padding: 0; text-indent: 8px; }
 		ul.profiles li img { margin: 0 6px 0 0; }
 		
