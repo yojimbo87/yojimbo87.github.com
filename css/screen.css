@@ -53,8 +53,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 	#header { margin: 24px 0; overflow: hidden; }
 	#header a { color: #000; display: block; float: left; font-family: Arial; font-size: 14px; font-weight: bold; line-height: 100px; margin: 0 24px; text-decoration: none; }
 	#header a:hover { text-decoration: underline; }
-	
-	#header a#menu-blog, #header a#menu-about { color: blue; }
+	#header a.right { float: right; }
 	
 	#content { margin: 4px 0; }
 	#content ul.posts { margin: 8px 0; }
