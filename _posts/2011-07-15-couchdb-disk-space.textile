@@ -1,0 +1,12 @@
+---
+layout: post
+title: CouchDB disk space consumption
+keywords: javascript, long polling, long poll server, minotaur, node.js, server side javascript
+published: false
+---
+
+h2. {{ page.title }}
+
+p(meta). 15 Jul 2011
+
+Test
