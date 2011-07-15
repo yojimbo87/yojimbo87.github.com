@@ -63,6 +63,7 @@ h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12
 		p { margin: 8px 0; text-align: justify; }
 		p.meta { font-family: Courier New; margin: 0 0 6px 6px; }
 		p.quote { font-style: italic; margin: 16px; }
+		p b { font-weight: bold; }
 		p code { background: #f8f8ff; border: 1px solid #ddd; padding: 1px 4px; }
 		ul { list-style-type: none; margin: 0 0 16px 8px; }
 		li { background: transparent url('/images/bullet.png') 0 50% no-repeat; display: list-item; text-indent: 20px; }
