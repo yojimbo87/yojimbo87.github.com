@@ -2,14 +2,13 @@
 layout: post
 title: Few words about CouchDB disk space consumption
 keywords: javascript, long polling, long poll server, minotaur, node.js, server side javascript
-published: false
 ---
 
 h2. {{ page.title }}
 
 p(meta). 15 Jul 2011
 
-"CouchDB":http://couchdb.apache.org/ and "Couchbase Single Server":http://www.couchbase.com/products-and-services/couchbase-single-server (which is based on CouchDB) are both "eventually consistent":http://guide.couchdb.org/draft/consistency.html databases and uses "Multi-Version Concurrency Control":http://en.wikipedia.org/wiki/Multiversion_concurrency_control (or MVCC) to achieve concurrent access by parallel connected clients and high availability.
+"CouchDB":http://couchdb.apache.org/ and "Couchbase Single Server":http://www.couchbase.com/products-and-services/couchbase-single-server (which is based on CouchDB) are both "eventually consistent":http://guide.couchdb.org/draft/consistency.html databases and uses "Multi-Version Concurrency Control":http://en.wikipedia.org/wiki/Multiversion_concurrency_control (or MVCC) to achieve concurrent access to parallel connected clients and high availability.
 
 h3. Rationale
 
@@ -73,7 +72,7 @@ h3. Test 2: Insert 100 000 documents and update each of them once
  - 336.5 MB before compaction
  - 27.8 MB after compaction
  
-h3. Test 3: Random updates (uptate 10 documents each 2 seconds)
+h3. Test 3: Randomly update 10 documents each 2 seconds
 
 **Not trimmed, after ~20 minutes, ~5938 changes**
 
