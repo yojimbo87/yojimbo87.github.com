@@ -42,52 +42,52 @@ One thing I was really curious about was if it would be worth to trimm document 
 
 Hardware and software configuration:
 
- - "VPS":http://en.wikipedia.org/wiki/Virtual_private_server Ubuntu server 11.04 (64 bit)
- - Couchbase Single Server community x86-64 2.0.0 developer preview
- - Intel Xeon 5540 @ 2.53 GHz (1 core)
- - 2 GB RAM 
- - 32 GB HDD
+ * "VPS":http://en.wikipedia.org/wiki/Virtual_private_server Ubuntu server 11.04 (64 bit)
+ * Couchbase Single Server community x86-64 2.0.0 developer preview
+ * Intel Xeon 5540 @ 2.53 GHz (1 core)
+ * 2 GB RAM 
+ * 32 GB HDD
 
 h3. Test 1: Insert 100 000 documents
 
 **Not trimmed**
 
- - 152.2 MB before compaction
- - 28.1 MB after compaction
+ * 152.2 MB before compaction
+ * 28.1 MB after compaction
  
 **Trimmed**
 
- - 149.9 MB before compaction
- - 25.7 MB after compaction
+ * 149.9 MB before compaction
+ * 25.7 MB after compaction
  
 h3. Test 2: Insert 100 000 documents and update each of them once
 
 **Not trimmed**
 
- - 339.8 MB before compaction
- - 30.0 MB after compaction
+ * 339.8 MB before compaction
+ * 30.0 MB after compaction
  
 **Trimmed**
 
- - 336.5 MB before compaction
- - 27.8 MB after compaction
+ * 336.5 MB before compaction
+ * 27.8 MB after compaction
  
 h3. Test 3: Randomly update 10 documents each 2 seconds
 
 **Not trimmed, after ~20 minutes, ~5938 changes**
 
- - 174.1 MB before compaction
- - 30.4 MB after compaction
+ * 174.1 MB before compaction
+ * 30.4 MB after compaction
  
 **Not trimmed, after ~30 minutes, ~19 957 changes**
 
- - 73.0 MB before compaction (started with previously compacted data)
- - 33.3 MB after compaction
+ * 73.0 MB before compaction (started with previously compacted data)
+ * 33.3 MB after compaction
  
 **Not trimmed, after ~60 minutes, ~34 265 changes**
 
- - 112.4 MB before compaction (started with previously compacted data)
- - 37.9 MB after compaction
+ * 112.4 MB before compaction (started with previously compacted data)
+ * 37.9 MB after compaction
  
 h3. Conclusion
 
