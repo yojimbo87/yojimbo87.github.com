@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CouchDB disk space consumption
+title: Few words about CouchDB disk space consumption
 keywords: javascript, long polling, long poll server, minotaur, node.js, server side javascript
 published: false
 ---
@@ -9,4 +9,87 @@ h2. {{ page.title }}
 
 p(meta). 15 Jul 2011
 
-Test
+"CouchDB":http://couchdb.apache.org/ and "Couchbase Single Server":http://www.couchbase.com/products-and-services/couchbase-single-server (which is based on CouchDB) are both "eventually consistent":http://guide.couchdb.org/draft/consistency.html databases and uses "Multi-Version Concurrency Control":http://en.wikipedia.org/wiki/Multiversion_concurrency_control (or MVCC) to achieve concurrent access by parallel connected clients and high availability.
+
+h3. Rationale
+
+MVCC however comes at a cost of higher disk space consumption since CouchDB creates an entire new version of document on save action which is stored along with the previous older versions of the same document. Because of this I made a few simple tests to see how much disk space would be approximately consumed in a few scenarios before and after "compaction":http://wiki.apache.org/couchdb/Compaction.
+
+In my tests I created 100 000 sample documents which consists of six fields used to store some dummy data (data values are the same for each document in order to maintain the same disk space usage when recreating the database). There are also native fields like @_id@, with values ranging from 1 to 100 000, and @_rev@ for revision number. 
+
+{% highlight javascript %}
+{
+	type: "user", 
+	FullName: "Johny Bravo xyz Homer Simpson",
+	CompanyName: "Super excellent startup company",
+	IP: "99.987.789.589",
+	Token: "d8a371d2-4842-48c6-9763-d4304028a43e",
+	Kiosks: [5, 4, 22, 48]
+}
+{% endhighlight %}
+
+One thing I was really curious about was if it would be worth to trimm document field names to achieve less disk space consumption. Therefore I also created sample document with shortened field names.
+
+{% highlight javascript %}
+{
+	t: 1, 
+	fn: "Johny Bravo xyz Homer Simpson",
+	cn: "Super excellent startup company",
+	IP: "99.987.789.589",
+	tkn: "d8a371d2-4842-48c6-9763-d4304028a43e",
+	ksks: [5, 4, 22, 48]
+}
+{% endhighlight %}
+
+Hardware and software configuration:
+
+ - "VPS":http://en.wikipedia.org/wiki/Virtual_private_server Ubuntu server 11.04 (64 bit)
+ - Couchbase Single Server community x86-64 2.0.0 developer preview
+ - Intel Xeon 5540 @ 2.53 GHz (1 core)
+ - 2 GB RAM 
+ - 32 GB HDD
+
+h3. Test 1: Insert 100 000 documents
+
+**Not trimmed**
+
+ - 152.2 MB before compaction
+ - 28.1 MB after compaction
+ 
+**Trimmed**
+
+ - 149.9 MB before compaction
+ - 25.7 MB after compaction
+ 
+h3. Test 2: Insert 100 000 documents and update each of them once
+
+**Not trimmed**
+
+ - 339.8 MB before compaction
+ - 30.0 MB after compaction
+ 
+**Trimmed**
+
+ - 336.5 MB before compaction
+ - 27.8 MB after compaction
+ 
+h3. Test 3: Random updates (uptate 10 documents each 2 seconds)
+
+**Not trimmed, after ~20 minutes, ~5938 changes**
+
+ - 174.1 MB before compaction
+ - 30.4 MB after compaction
+ 
+**Not trimmed, after ~30 minutes, ~19 957 changes**
+
+ - 73.0 MB before compaction (started with previously compacted data)
+ - 33.3 MB after compaction
+ 
+**Not trimmed, after ~60 minutes, ~34 265 changes**
+
+ - 112.4 MB before compaction (started with previously compacted data)
+ - 37.9 MB after compaction
+ 
+h3. Conclusion
+
+Average insertion speed of 100 000 sample documents was about 450 docs per second. These tests may not be accurate enough or taken too seriously because real benchmarks require real-world load. I can however conclude from them for example that although trimming field names can save you tens or hundreds of MB depending on documents volume, but for sake of readability and maintainability of stored data it may not be worth it. Other thing is that when you have stored large amount of documents which are frequently updated you should count with progressive disk space consumption and compact your database accordingly.
