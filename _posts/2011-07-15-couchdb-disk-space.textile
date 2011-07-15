@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Few words about CouchDB disk space consumption
-keywords: javascript, long polling, long poll server, minotaur, node.js, server side javascript
+keywords: couchdb, couchbase, database, nosql, disk space, compaction, benchmark, test
 ---
 
 h2. {{ page.title }}
