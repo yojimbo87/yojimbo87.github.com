@@ -8,19 +8,19 @@ h2. {{ page.title }}
 
 p(meta). 20 Sep 2011
 
-There are numerous node.js learning resources around the internets which includes articles, presentations, videos and other materials which offers great explanations on various areas of this jawesome technology. In this article I would try to aggregate selected materials in order to organize these learning resources into logical groups to help those who are trying to learn node.js and server side JavaScript. If you would like to add some other good materials feel free to send me a "pull request":https://github.com/yojimbo87/yojimbo87.github.com .
+There are numerous node.js learning resources around the internets which includes articles, presentations, videos and other materials which offers explanations on various areas of this emerging technology. In this article I would try to aggregate selected materials to help those who are trying to learn node.js and server side JavaScript. If you would like to add some other good materials feel free to send me a "pull request":https://github.com/yojimbo87/yojimbo87.github.com .
 
 h3. JavaScript
 
-Let's start first with some classic JavaScript resources, since understanding it's principles is essential before going any further. Douglas Crockford's six videos in the "Crockford on JavaScript":http://yuiblog.com/crockford/ series (it's worth to watch them all including the first history lesson) and his book "JavaScript: The Good Parts":http://oreilly.com/catalog/9780596517748/ are top tier resources if someone wants to take learning JavaScript seriously. Other materials includes "JavaScript Garden":http://bonsaiden.github.com/JavaScript-Garden/ , "Essential JavaScript Design Patterns For Beginners":http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/ and "JavaScript Patterns":http://oreilly.com/catalog/9780596806767 book.
+First some classic JavaScript resources, since understanding it's principles is essential before going any further. Douglas Crockford's six videos in the "Crockford on JavaScript":http://yuiblog.com/crockford/ series (it's worth to watch them all including the first history lesson) and his book "JavaScript: The Good Parts":http://oreilly.com/catalog/9780596517748/ are top tier resources if someone wants to take learning JavaScript seriously. Other materials includes "JavaScript Garden":http://bonsaiden.github.com/JavaScript-Garden/, "Essential JavaScript Design Patterns For Beginners":http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/ and "JavaScript Patterns":http://oreilly.com/catalog/9780596806767 book.
 
 h3. Basics
 
-There are numerous introductory videos by Ryan Dahl himself (node.js creator) from which I recommend to watch at least these two: "Introduction to Node.js with Ryan Dahl":http://www.youtube.com/watch?v=jo_B4LTHi3I and "Server-side JavaScript with Node, Connect & Express":http://vimeo.com/18077379. Other worth to read materials with node.js basics includes for example "Node.js Guide":http://nodeguide.com/ and "The Node Beginner Book":http://nodebeginner.org/ .
+There are numerous introductory videos by Ryan Dahl himself (node.js creator) from which I recommend to watch at least these two: "Introduction to Node.js with Ryan Dahl":http://www.youtube.com/watch?v=jo_B4LTHi3I and "Server-side JavaScript with Node, Connect & Express":http://vimeo.com/18077379. Other worth to read materials with node.js basics includes for example "Node.js Guide":http://nodeguide.com/ and "The Node Beginner Book":http://nodebeginner.org/.
 
 h3. How node.js event loop works
 
-If you want to dig little deeper into node.js (I highly recommend you to do that) and learn how it works there are several articles on this topic like "Understanding the node.js event loop":http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/ and "Understanding event loops and writing great code for Node.js":http://developer.yahoo.com/blogs/ydn/posts/2010/10/understanding-the-event-loops-and-writing-great-code-for-node-js-part-1/ .
+If you want to dig little deeper into node.js (I highly recommend you to do that) and learn how it works there are several articles on this topic like "Understanding the node.js event loop":http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/ and "Understanding event loops and writing great code for Node.js":http://developer.yahoo.com/blogs/ydn/posts/2010/10/understanding-the-event-loops-and-writing-great-code-for-node-js-part-1/.
 
 h3. Event driven programming, callbacks and asynchronous code design
 
@@ -28,4 +28,4 @@ Event driven programming (and architecture) represents a core concept for writin
 
 h3. Pointers to other resources
 
-Other great resources which centers around node.js technology includes several blogs such as "node blog":http://blog.nodejs.org/ , "node tuts":http://nodetuts.com/ , "How To Node":http://howtonode.org/ , "DailyJS":http://dailyjs.com/ , "nodejitsu blog":http://blog.nodejitsu.com/ and podcast show "NodeUp":http://nodeup.com/.
+Other great resources which centers around node.js technology includes several blogs such as "node blog":http://blog.nodejs.org/, "node tuts":http://nodetuts.com/, "How To Node":http://howtonode.org/, "DailyJS":http://dailyjs.com/, "nodejitsu blog":http://blog.nodejitsu.com/ and podcast show "NodeUp":http://nodeup.com/.
