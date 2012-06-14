@@ -4,31 +4,15 @@ title: About
 keywords: about
 ---
 
-h2. About
+h2. About me
 
-At the time of writing this page I was (and hopefully still am): 
-* Passionate programmer and software engineer
-* Cyberpunk fan
-* Samurai admirer
-* Deeply religious nonbeliever
+Hi, my name is Tomas Bosak. I'm a software developer interested mainly in various web and database technologies to which I try to dedicate most of my time. Except software development I also like to watch cyberpunk movies, read sci-fi books and collect motivational quotes.
 
-I @used to@ work with the following:
-* C/C++, Java
-* ASP.NET Web Forms
-* MS SQL Server
-* Nginx
+I realized that programming is one of my biggest passions back in a high school when I was developing C based Win32 desktop application for managing students. Since then I explored many technologies including C++, C#/.NET, Java, HTML/CSS, JavaScript and Node.js. Most of my experience are targeted to .NET platform and web based technologies. I have a solid knowledge of RDBMS data modeling, SQL and several NoSQL database systems such as CouchDB and Redis. I also have some minor experience with Windows and Linux server administration.
 
-I @like@ to keep maintaining knowledge about this stuff:
-* C#, SQL
-* ASP.NET MVC
-* MySQL
-* Ubuntu Server, Windows Server
-* IIS, Apache
+I have worked on various kinds of software projects and my current interest is around real-time single page web applications using ASP.NET MVC, HTML5 and JavaScript.
 
-I @love@ to play with these ones:
-* HTML5, JavaScript
-* Node.js and data intensive real-time madness
-* CouchDB, Redis and NoSQL systems in general
-
-You can find me here:
+You can find some of my public profiles on these websites:
 <ul class="profiles"><li><img src="/images/stackoverflow.png" alt="stackoverflow" /> "Stack Overflow":http://stackoverflow.com/users/217288/yojimbo87</li><li><img src="/images/github.png" alt="github" /> "GitHub":https://github.com/yojimbo87</li><li><img src="/images/twitter.png" alt="twitter" /> "Twitter":https://twitter.com/yojimbo87</li><li><img src="/images/linkedin.gif" alt="linkedin" /> "LinkedIn":http://www.linkedin.com/in/tomasbosak</li></ul>
+
+Or perhaps you would like to drop me a line: bosak.tomas&lt;at&gt;gmail.com

@@ -4,9 +4,9 @@ title: yojimbo87's blog
 keywords: posts
 ---
 
-<h1>Posts</h1>
+<h2>Blog posts</h2>
 <ul class="posts">
 {% for post in site.posts %}
-  <li><span>{{ post.date | date_to_string }}</span>&nbsp; &raquo; &nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>
+  <li>&raquo; &nbsp;<a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.date | date_to_string }}</span></li>
 {% endfor %}
 </ul>

@@ -43,35 +43,38 @@ table {
     border-spacing: 0;
 }
 /* Screen */
-body { background: #fff; font-family: Verdana, Arial; font-size: 12px; line-height: 22px; }
+body { background: #f7f8f4; font-family: Verdana, Arial; font-size: 12px; line-height: 22px; overflow-y: scroll; }
 
-h1 { color: #c80000; font-family: Arial; font-size: 16px; font-weight: bold; margin: 8px 4px; }
-h2 { color: #c80000; font-family: Arial; font-size: 16px; font-weight: bold; margin: 12px 4px 8px 4px; }
-h3 { font-family: Arial; font-size: 14px; font-weight: bold; margin: 24px 4px 12px 4px; }
+a { color: #146ba2; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-#container { margin: 0px auto; overflow: hidden; position: relative; width: 700px; }
-	#header { margin: 24px 0; overflow: hidden; }
-	#header a { color: #000; display: block; float: left; font-family: Arial; font-size: 14px; font-weight: bold; line-height: 100px; margin: 0 24px; text-decoration: none; }
-	#header a:hover { text-decoration: underline; }
-	#header a.right { float: right; }
+h1 { color: #c80000; font-family: Georgia; font-size: 16px; font-weight: bold; margin: 8px 4px; }
+h2 { border-bottom: 2px solid #cbccc9; color: #000; font-family: Georgia; font-size: 18px; font-weight: bold; line-height: 32px; margin: 12px 0 8px 0; padding: 0 0 4px 0; }
+h3 { font-family: Georgia; font-size: 16px; font-weight: bold; margin: 32px 0 12px 0; }
+
+#container { margin: 0px auto; overflow: hidden; position: relative; width: 750px; }
+	#header { margin: 16px 0 8px 0; overflow: hidden; }
+	#header .menu { float: right; line-height: 48px; }
+	#header a { color: #065d9c; display: block; float: left; font-family: Georgia; font-size: 16px; font-weight: bold; padding: 0 16px; text-decoration: none; }
+	#header a:hover { color: #000; }
+	#header span { color: #cbccc9; float: left; font-weight: bold; }
 	
-	#content { margin: 4px 0; }
-	#content ul.posts { margin: 8px 0; }
-	#content ul.posts li { background: transparent; margin: 2px 0; text-indent: 0px; }
-	#content ul.posts li span { color: #aaa; font-family: Courier New; }
-		#post { margin: 0 0 16px 0; }
-		p { margin: 8px 0; text-align: justify; }
-		p.meta { font-family: Courier New; margin: 0 0 6px 6px; }
+	#content-wrapper { border: 1px solid #eaebe8; margin: 0 0 24px 0; }
+	#content { background: #fbfbf9; border: 1px solid #dfe0dc; padding: 12px 32px 24px 32px; }
+	#content ul.posts { margin: 16px 0 0 0; }
+	#content ul.posts li { background: transparent; margin: 12px 0; text-indent: 0px; }
+	#content ul.posts li span { color: #aaa; float: right; font-family: Georgia; }
+		#post { margin: 0 0 32px 0; }
+		p { line-height: 26px; margin: 20px 0; text-align: left; }
+		p.meta { color: #969d97; font-family: Georgia; font-weight: bold; margin: 0 0 6px 6px; }
 		p.quote { font-style: italic; margin: 16px; }
 		p b { font-weight: bold; }
 		p code { background: #f8f8ff; border: 1px solid #ddd; padding: 1px 4px; }
 		ul { list-style-type: none; margin: 0 0 16px 8px; }
 		li { background: transparent url('/images/bullet.png') 0 50% no-repeat; display: list-item; text-indent: 20px; }
 		.highlight pre { background: #f8f8ff; border: 1px solid #ddd; font-family: Courier New; margin: 12px 0; overflow: auto; padding: 4px; }
-		.related { margin: 12px 0 24px 0; overflow: hidden; }
 		
 		ul.profiles { margin: 0; padding: 0; }
 		ul.profiles li { background: transparent; margin: 8px 0 0 8px; overflow: hidden; padding: 0; text-indent: 12px; }
 		ul.profiles li a { float: left; display: block; line-height: 16px; text-indent: 8px; }
 		ul.profiles li img { float: left; }
-		

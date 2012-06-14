@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>{{ page.title }}</title>
-    <meta name="author" content="Tomas Bosak">
-    <meta name="keywords" content="Tomas Bosak, blog, yojimbo87, {{ page.keywords }}">
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Tomas Bosak" />
+	<meta name="description" content="Personal blog of Tomas Bosak" />
+    <meta name="keywords" content="Tomas Bosak, blog, yojimbo87, {{ page.keywords }}" />
+	<link rel="shortcut icon" href="/favicon.png" />
     <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
     <script type="text/javascript">
@@ -22,17 +24,21 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<a href="/" style="height: 100px; margin: 0 24px 0 0;">
-				<img src="/images/samurai.jpg" alt="" />
+			<a href="/">
+				<img src="/images/yojimbo87.png" alt="BLog logo" />
 			</a>
-			<a href="/">BLOG</a>
-			<a href="/about/about.html">ABOUT</a>
-			<a href="/feed/feed.xml" class="right">
-				<img src="/images/feed.png" alt="feed" />
-			</a>
+			<div class="menu">
+				<a href="/">blog</a>
+				<span>/</span>
+				<a href="/about/about.html">about</a>
+				<span>/</span>
+				<a href="/feed/feed.xml">rss</a>
+			</div>
 		</div>
-		<div id="content">
-			{{ content }}
+		<div id="content-wrapper">
+			<div id="content">
+				{{ content }}
+			</div>
 		</div>
 	</div>
 </body>
