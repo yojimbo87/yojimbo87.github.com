@@ -1,0 +1,168 @@
+---
+layout: post
+title: Repeated and multiple key press events without stuttering in JavaScript
+keywords: event, javascript, key, multiple, press
+---
+
+h2. {{ page.title }}
+
+p(meta). 23 Aug 2012
+
+Repeated or multiple key press events in JavaScript can cause little pause or delay which leads to stuttering behavior, for example, in games which are using keyboard based navigation. This delay is probably caused by internal browser timeout between key press changes.
+
+In order to prevent this delay there could be an interval which is set once the key(s) are pressed and cleared when key(s) are released. Following examples demonstrates this behavior and tracks which direction (out of 8 "cardinal and intercardinal directions":http://en.wikipedia.org/wiki/Cardinal_direction) is pressed by the user on keyboard.
+
+{% highlight javascript %}
+function onKeyPress(callback) {
+    var keys = {},
+        keysCount = 0,
+        interval = null,
+        trackedKeys = {
+            119: true, // W
+            87: true, // w
+            115: true, // S
+            83: true, // s
+            97: true, // A
+            65: true, // a
+            100: true, // D
+            68: true, // d
+            37: true, // left arrow
+            38: true, // up arrow
+            39: true, // right arrow
+            40: true // down arrow
+        };
+
+    $(document).keydown(function (event) {
+        var code = event.which;
+        
+        if (trackedKeys[code]) {
+            if (!keys[code]) {
+                keys[code] = true;
+                keysCount++;
+            }
+            
+            if (interval === null) {
+                interval = setInterval(function () {
+                    var direction = '';
+                    
+                    // check if north or south
+                    if (keys[119] || keys[87] || keys[38]) {
+                        direction = 'n';
+                    } else if (keys[115] || keys[83] || keys[40]) {
+                        direction = 's';
+                    }
+                    
+                    // concat west or east
+                    if (keys[97] || keys[65] || keys[37]) {
+                        direction += 'w';
+                    } else if (keys[100] || keys[68] || keys[39]) {
+                        direction += 'e';
+                    }
+                
+                    callback(direction);
+                }, 1000 / 50);
+            }
+        }
+    });
+    
+    $(document).keyup(function (event) {
+        var code = event.which;
+    
+        if (keys[code]) {
+            delete keys[code];
+            keysCount--;
+        }
+        
+        // need to check if keyboard movement stopped
+        if ((trackedKeys[code]) && (keysCount === 0)) {
+            clearInterval(interval);
+            interval = null;
+            callback('none');
+        }
+    });
+}
+{% endhighlight %}
+
+Try to press W, S, A, D or arrow keys to see the resulting direction below.
+
+Pressed direction: <span id="result">none</span>
+
+<script src="http://code.jquery.com/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function onKeyPress(callback) {
+    var keys = {},
+        keysCount = 0,
+        interval = null,
+        trackedKeys = {
+            119: true, // W
+            87: true, // w
+            115: true, // S
+            83: true, // s
+            97: true, // A
+            65: true, // a
+            100: true, // D
+            68: true, // d
+            37: true, // left arrow
+            38: true, // up arrow
+            39: true, // right arrow
+            40: true // down arrow
+        };
+
+    $(document).keydown(function (event) {
+        var code = event.which;
+        
+        if (trackedKeys[code]) {
+            if (!keys[code]) {
+                keys[code] = true;
+                keysCount++;
+            }
+            
+            if (interval === null) {
+                interval = setInterval(function () {
+                    var direction = '';
+                    
+                    // check if north or south
+                    if (keys[119] || keys[87] || keys[38]) {
+                        direction = 'n';
+                    } else if (keys[115] || keys[83] || keys[40]) {
+                        direction = 's';
+                    }
+                    
+                    // concat west or east
+                    if (keys[97] || keys[65] || keys[37]) {
+                        direction += 'w';
+                    } else if (keys[100] || keys[68] || keys[39]) {
+                        direction += 'e';
+                    }
+                
+                    callback(direction);
+                }, 1000 / 50);
+            }
+        }
+    });
+    
+    $(document).keyup(function (event) {
+        var code = event.which;
+    
+        if (keys[code]) {
+            delete keys[code];
+            keysCount--;
+        }
+        
+        // need to check if keyboard movement stopped
+        if ((trackedKeys[code]) && (keysCount === 0)) {
+            clearInterval(interval);
+            interval = null;
+            callback('none');
+        }
+    });
+}
+
+$(function () {
+    var $span = $('#result');
+    
+    onKeyPress(function (direction) {
+        $span.text(direction);
+    });
+});
+</script>
