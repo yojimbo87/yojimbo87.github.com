@@ -43,7 +43,7 @@ table {
     border-spacing: 0;
 }
 /* Screen */
-body { background: #f7f8f4; font-family: Verdana, Arial; font-size: 12px; line-height: 22px; overflow-y: scroll; }
+body { background: url('../images/bg.jpg'); font-family: Verdana, Arial; font-size: 12px; line-height: 22px; overflow-y: scroll; }
 
 a { color: #146ba2; text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -57,10 +57,10 @@ h3 { font-family: Georgia; font-size: 16px; font-weight: bold; margin: 32px 0 12
 	#header .menu { float: right; line-height: 48px; }
 	#header a { color: #065d9c; display: block; float: left; font-family: Georgia; font-size: 16px; font-weight: bold; padding: 0 16px; text-decoration: none; }
 	#header a:hover { color: #000; }
-	#header span { color: #cbccc9; float: left; font-weight: bold; }
+	#header span { color: #6e6e6e; float: left; font-weight: bold; }
 	
-	#content-wrapper { border: 1px solid #eaebe8; margin: 0 0 24px 0; }
-	#content { background: #fbfbf9; border: 1px solid #dfe0dc; padding: 12px 32px 24px 32px; }
+	#content-wrapper { border: 1px solid #dfe0dc; margin: 0 0 24px 0; }
+	#content { background: #fbfbf9; border: 1px solid #a6a6a6; padding: 12px 32px 24px 32px; }
 	#content ul.posts { margin: 16px 0 0 0; }
 	#content ul.posts li { background: transparent; margin: 12px 0; text-indent: 0px; }
 	#content ul.posts li span { color: #aaa; float: right; font-family: Georgia; }
