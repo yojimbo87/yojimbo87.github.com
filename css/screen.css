@@ -57,7 +57,7 @@ h3 { font-family: Georgia; font-size: 16px; font-weight: bold; margin: 32px 0 12
 	#header .menu { float: right; line-height: 48px; }
 	#header a { color: #065d9c; display: block; float: left; font-family: Georgia; font-size: 16px; font-weight: bold; padding: 0 16px; text-decoration: none; }
 	#header a:hover { color: #000; }
-	#header span { color: #6e6e6e; float: left; font-weight: bold; }
+	#header span { color: #cecfcc; float: left; font-weight: bold; }
 	
 	#content-wrapper { border: 1px solid #dfe0dc; margin: 0 0 24px 0; }
 	#content { background: #fbfbf9; border: 1px solid #a6a6a6; padding: 12px 32px 24px 32px; }
