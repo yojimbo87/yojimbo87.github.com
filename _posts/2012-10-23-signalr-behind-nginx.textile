@@ -23,7 +23,7 @@ GlobalHost.Configuration.KeepAlive = TimeSpan.FromSeconds(...);
 
 h3. Configuring nginx
 
-There are numerous "tutorials":http://www.cyberciti.biz/tips/using-nginx-as-reverse-proxy.html around the web regarding how to setup nginx as a reverse proxy, so I will stick only to important parts. Following directives should be set to higher values than SignalR settings. Keep in mind that the time amount difference should be at least fifteen seconds since SignalR checks connection status (by default) in ten second intervals.
+There are numerous "tutorials":http://www.cyberciti.biz/tips/using-nginx-as-reverse-proxy.html around the web regarding how to setup nginx as a reverse proxy, so I will stick only to important parts. Following directives should be set to higher values than SignalR settings. Keep in mind that the time amount difference should be at least fifteen seconds higher than SignalR since connection status checks are (by default) in ten second intervals.
 
 {% highlight nginx %}
 keepalive_timeout <sec> <sec>;
@@ -32,6 +32,12 @@ send_timeout <sec>;
 proxy_connect_timeout <sec>;
 proxy_send_timeout <sec>;
 proxy_read_timeout <sec>;
+{% endhighlight %}
+
+Another important directive is "proxy_buffering":http://wiki.nginx.org/HttpProxyModule#proxy_buffering which should be disabled in order to prevent nginx buffer asynchronous responses. 
+
+{% highlight nginx %}
+proxy_buffering off;
 {% endhighlight %}
 
 My setup involved ASP.NET MVC website which also hosted SignalR Hub served on Windows Server 2k8 and IIS 7.5. This website could be accessed either through nginx sub.foo.bar style URL or directly through IIS sub-1.foo.bar (for debugging purpose) therefore Host header in the following configuration was set to fixed value.
