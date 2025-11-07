@@ -1,2 +1,8 @@
-markdown: rdiscount
-pygments: true
+title: yojimbo87
+description: A starter template for a Jeykll site using the Just the Docs theme!
+logo: "/assets/images/yojimbo87.png"
+theme: just-the-docs
+
+url: yojimbo87.github.com
+favicon_ico: "/assets/images/favicon.png"
+color_scheme: custom
