@@ -8,6 +8,6 @@ has_toc: false
  
 # Home
 
-Main purpose of this website is, for the time being, to store specific knowledge from various areas under the [Docs][docs].
+Main purpose of this website is, for the time being, to store specific knowledge from various areas under the [Docs][docs] sub-pages.
 
 [docs]: /docs

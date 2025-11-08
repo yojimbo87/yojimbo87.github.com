@@ -9,7 +9,7 @@ permalink: /docs/jekyll/
 
 External resources:
 
-- [Installation guide](https://www.geeksforgeeks.org/installation-guide/how-to-install-jekyll-on-windows/)
+- [Installation guide on Windows](https://www.geeksforgeeks.org/installation-guide/how-to-install-jekyll-on-windows/)
 
 Running local server:
 
