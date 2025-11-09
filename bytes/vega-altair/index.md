@@ -1,8 +1,8 @@
 ---
 title: Vega-Altair
 layout: default
-parent: Docs
-permalink: /docs/vega-altair/
+parent: Bytes
+permalink: /bytes/vega-altair/
 ---
 
 # Vega-Altair

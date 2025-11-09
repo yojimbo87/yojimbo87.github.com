@@ -1,8 +1,8 @@
 ---
 title: Jekyll
 layout: default
-parent: Docs
-permalink: /docs/jekyll/
+parent: Bytes
+permalink: /bytes/jekyll/
 ---
 
 # Jekyll

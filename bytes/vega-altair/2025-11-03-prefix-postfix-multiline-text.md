@@ -3,7 +3,7 @@ title: Prefixing, postfixing and multiline text in Vega Altair charts
 layout: default
 parent: Vega-Altair
 nav_exclude: true
-permalink: /docs/vega-altair/prefix-postfix-multiline-text
+permalink: /bytes/vega-altair/prefix-postfix-multiline-text
 has_toc: false
 ---
 

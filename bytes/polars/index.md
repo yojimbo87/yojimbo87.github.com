@@ -1,8 +1,8 @@
 ---
 title: Polars
 layout: default
-parent: Docs
-permalink: /docs/polars/
+parent: Bytes
+permalink: /bytes/polars/
 ---
 
 # Polars

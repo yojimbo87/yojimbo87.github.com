@@ -1,8 +1,8 @@
 ---
 title: Jira Structure
 layout: default
-parent: Docs
-permalink: /docs/jira-structure/
+parent: Bytes
+permalink: /bytes/jira-structure/
 ---
 
 # Jira Structure
