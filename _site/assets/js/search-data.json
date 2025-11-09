@@ -1,0 +1,51 @@
+{"0": {
+    "doc": "Prefixing, postfixing and multiline text in Vega Altair charts",
+    "title": "Prefixing, postfixing and multiline text in Vega Altair charts",
+    "content": "Published 2025-11-03 . Vega Altair allows to create custom text labels, which can enrich charts with static text-based information. Below is a python example that creates boxplot chart with distribution of engine displacement per each cyclinder count groups and adds text marks summarizing median and mean values of individual distributions. import altair as alt from vega_datasets import data # take cars dataset cars = data.cars() # create chart showing distribution of engine displacement based on cylinders count chart = ( alt.Chart(cars) .mark_boxplot(extent=\"min-max\", orient=\"horizontal\") .encode( alt.X(\"Displacement\"), alt.Y(\"Cylinders\") ) ) # create text labels for each cylinder count group text = ( alt.Chart(cars) .mark_text( # set text alignment for better readibility align=\"left\", baseline=\"middle\", dx=10, dy=-5 ) .encode( # set starting text position for each distribution # text will start at the end of Displacement distribtuion on X-axis alt.X(\"max(Displacement)\"), # and for each cylinder count on Y-axis alt.Y(\"Cylinders\"), # define text label alt.Text(\"label:N\") ) .transform_joinaggregate( # calculate median values median = \"median(Displacement):Q\", # calculate mean values mean = \"mean(Displacement):Q\", # we want to show the distribution of displacement for each cylinder count group groupby = [\"Cylinders\"] ) .transform_calculate( # calculate label values to consist of median and mean data # mean value is rounded to 2 decimal places label = \"['Median: ' + datum.median, 'Mean: ' + round(datum.mean * 100) / 100]\" ) ) # plot chart and text chart + text . ",
+    "url": "/docs/vega-altair/prefix-postfix-multiline-text",
+    
+    "relUrl": "/docs/vega-altair/prefix-postfix-multiline-text"
+  },"1": {
+    "doc": "Polars",
+    "title": "Polars",
+    "content": "External resources: . | User guide | . ",
+    "url": "/docs/polars/",
+    
+    "relUrl": "/docs/polars/"
+  },"2": {
+    "doc": "Jira Structure",
+    "title": "Jira Structure",
+    "content": "External resources: . | Formulas docs | Formulas Standard functions | Formulas Aggregate functions | Jira fields and Structure attributes | Item properties | . ",
+    "url": "/docs/jira-structure/",
+    
+    "relUrl": "/docs/jira-structure/"
+  },"3": {
+    "doc": "Vega-Altair",
+    "title": "Vega-Altair",
+    "content": "External resources: . | Introduction to Altair | User guide | Example gallery | Vega datasets definition | . ",
+    "url": "/docs/vega-altair/",
+    
+    "relUrl": "/docs/vega-altair/"
+  },"4": {
+    "doc": "Docs",
+    "title": "Docs",
+    "content": "Sometimes it’s hard to remember what was for breakfast this morning, not even to recollect important lessons from yesterday. Hence the existence of the following sub-pages that aim to store subjectively important bits of information and hard (l)earned knowledge from various fields of interest for later use. ",
+    "url": "/docs/",
+    
+    "relUrl": "/docs/"
+  },"5": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "Main purpose of this website is, for the time being, to store specific knowledge from various areas under the Docs sub-pages. ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"6": {
+    "doc": "Jekyll",
+    "title": "Jekyll",
+    "content": "External resources: . | Installation guide on Windows | . Running local server: . bundle exec jekyll serve . ",
+    "url": "/docs/jekyll/",
+    
+    "relUrl": "/docs/jekyll/"
+  }
+}
