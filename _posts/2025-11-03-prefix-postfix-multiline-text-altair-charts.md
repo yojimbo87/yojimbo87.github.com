@@ -15,7 +15,7 @@ has_toc: false
 Published on {{ page.date | date_to_long_string: "ordinal" }} under {% for tag in page.tags %}<a href="/tags/{{ tag | downcase }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
 {: .fs-2 .text-grey-dk-000 }
 
-Vega Altair allows to create custom text labels, which can enrich charts with static text-based information. Below is a python example that creates [boxplot][link_to_boxplot] chart with distribution of engine displacement per each cyclinder count groups and adds [text][link_to_text] marks summarizing median and mean values of individual distributions.
+Vega Altair allows to create custom text labels, which can enrich charts with static text-based information. Below is a python example that creates [boxplot](https://altair-viz.github.io/user_guide/marks/boxplot.html) chart with distribution of engine displacement per each cyclinder count groups and adds [text](https://altair-viz.github.io/user_guide/marks/text.html) marks summarizing median and mean values of individual distributions.
 
 ```python
 import altair as alt
@@ -72,8 +72,4 @@ text = (
 chart + text
 ```
 
-![title][prefix-postfix-multiline-text-01]
-
-[link_to_boxplot]: https://altair-viz.github.io/user_guide/marks/boxplot.html
-[link_to_text]: https://altair-viz.github.io/user_guide/marks/text.html
-[prefix-postfix-multiline-text-01]: /assets/images/pages/2025-11-03-prefix-postfix-multiline-text-01.png
+![title](/assets/images/posts/2025-11-03-prefix-postfix-multiline-text-altair-charts-01.png)
