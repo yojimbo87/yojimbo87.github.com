@@ -1,15 +1,18 @@
 ---
 title: Prefixing, postfixing and multiline text in Vega Altair charts
 layout: default
-parent: Vega-Altair
-nav_exclude: true
-permalink: /bytes/vega-altair/prefix-postfix-multiline-text
+parent: Bytes
+permalink: /bytes/prefix-postfix-multiline-text-altair-charts
+date: 2025-11-03 00:00:00
+tags:
+    - Python 
+    - Vega-Altair
 has_toc: false
 ---
 
 # Prefixing, postfixing and multiline text in Vega Altair charts
 
-Published 2025-11-03
+Published on {{ page.date | date_to_long_string: "ordinal" }} under {% for tag in page.tags %}<a href="/tags/{{ tag | downcase }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
 {: .fs-2 .text-grey-dk-000 }
 
 Vega Altair allows to create custom text labels, which can enrich charts with static text-based information. Below is a python example that creates [boxplot][link_to_boxplot] chart with distribution of engine displacement per each cyclinder count groups and adds [text][link_to_text] marks summarizing median and mean values of individual distributions.

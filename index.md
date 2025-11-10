@@ -8,6 +8,14 @@ has_toc: false
  
 # Home
 
-Main purpose of this website is, for the time being, to store specific knowledge from various areas under the [Bytes][bytes] sub-pages.
+Main purpose of this website is, for the time being, to store specific bits of knowledge as [bytes](/bytes) categorized under various [tags](/tags).
 
-[bytes]: /bytes
+**Recent bytes:**
+
+<ul>
+{% for post in site.posts limit 10 %}
+    <li>
+    <a href='{{ post.url }}'>{{ post.title }}</a>
+    </li>
+{% endfor %}
+</ul>
