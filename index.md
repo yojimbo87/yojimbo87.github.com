@@ -8,9 +8,9 @@ has_toc: false
  
 # Home
 
-Main purpose of this website is, for the time being, to store specific bits of knowledge as [bytes](/bytes) categorized under various [tags](/tags).
+Main purpose of this website is (for the time being) to store specific bits of knowledge in the form of ["bites"](/bites) categorized under various [tags](/tags).
 
-**Recent bytes:**
+**Recent bites:**
 
 <ul>
 {% for post in site.posts limit 10 %}

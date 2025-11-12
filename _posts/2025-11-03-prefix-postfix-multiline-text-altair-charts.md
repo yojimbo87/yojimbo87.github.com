@@ -1,8 +1,8 @@
 ---
 title: Prefixing, postfixing and multiline text in Vega Altair charts
 layout: default
-parent: Bytes
-permalink: /bytes/prefix-postfix-multiline-text-altair-charts
+parent: Bites
+permalink: /bites/prefix-postfix-multiline-text-altair-charts
 date: 2025-11-03 00:00:00
 tags:
     - Python 

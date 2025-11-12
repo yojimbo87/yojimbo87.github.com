@@ -9,7 +9,7 @@ permalink: /tags/jira-structure/
 
 {% assign tag_posts = site.posts | where_exp: 'post', "post.tags contains page.title" %}
 {% if tag_posts.size > 0 %}
-Bytes:
+Bites:
 
 <ul>
 {% for post in tag_posts %}

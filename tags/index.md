@@ -7,7 +7,7 @@ has_toc: false
 
 # Tags
 
-List of tags which has bytes in them:
+List of tags which has "bites" in them:
 
 <ul>
 {% for tag in site.tags %}

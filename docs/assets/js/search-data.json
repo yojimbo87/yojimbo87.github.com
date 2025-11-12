@@ -22,37 +22,37 @@
   },"3": {
     "doc": "Python",
     "title": "Python",
-    "content": "Bytes: . | Prefixing, postfixing and multiline text in Vega Altair charts | . ",
+    "content": "Bites: . | Prefixing, postfixing and multiline text in Vega Altair charts | . ",
     "url": "/tags/python",
     
     "relUrl": "/tags/python"
   },"4": {
     "doc": "Vega-Altair",
     "title": "Vega-Altair",
-    "content": "Bytes: . | Prefixing, postfixing and multiline text in Vega Altair charts | . External resources: . | Introduction to Altair | User guide | Example gallery | Vega datasets definition | . ",
+    "content": "Bites: . | Prefixing, postfixing and multiline text in Vega Altair charts | . External resources: . | Introduction to Altair | User guide | Example gallery | Vega datasets definition | . ",
     "url": "/tags/vega-altair",
     
     "relUrl": "/tags/vega-altair"
   },"5": {
     "doc": "Tags",
     "title": "Tags",
-    "content": "List of tags which has bytes in them: . | Python | Vega-Altair | . ",
+    "content": "List of tags which has “bites” in them: . | Python | Vega-Altair | . ",
     "url": "/tags/",
     
     "relUrl": "/tags/"
   },"6": {
     "doc": "Home",
     "title": "Home",
-    "content": "Main purpose of this website is, for the time being, to store specific bits of knowledge as bytes categorized under various tags. Recent bytes: . | Prefixing, postfixing and multiline text in Vega Altair charts | . ",
+    "content": "Main purpose of this website is (for the time being) to store specific bits of knowledge in the form of “bites” categorized under various tags. Recent bites: . | Prefixing, postfixing and multiline text in Vega Altair charts | . ",
     "url": "/",
     
     "relUrl": "/"
   },"7": {
-    "doc": "Bytes",
-    "title": "Bytes",
-    "content": "Sometimes it’s hard to remember what was for breakfast this morning, not even to recollect important lessons from yesterday. Hence the existence of the following sub-pages that aim to store subjectively important bytes of information and hard (l)earned knowledge from various fields of interest for later use. Bytes from 2025 . | Prefixing, postfixing and multiline text in Vega Altair charts | . ",
-    "url": "/bytes/",
+    "doc": "Bites",
+    "title": "Bites",
+    "content": "Sometimes it’s hard to remember what was for breakfast this morning, not even to recollect important lessons from yesterday. Hence the existence of the following posts, that aim to store subjectively important “bites” of information and hard (l)earned knowledge from various fields of interest for later use. Bites from 2025 . | Prefixing, postfixing and multiline text in Vega Altair charts | . ",
+    "url": "/bites/",
     
-    "relUrl": "/bytes/"
+    "relUrl": "/bites/"
   }
 }
